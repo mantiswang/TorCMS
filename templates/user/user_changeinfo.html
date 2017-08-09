@@ -1,28 +1,15 @@
 {% extends "../theme/bage.html" %}
-
-
-
-
 {% block typebody %}
-
-
 <div class="mtop">
-
     <ul class="breadcrumb">
         <li><a href="/">{{ _('Home') }}</a></li>
-
         <li class="active">{{ _('Modify personal information') }}</li>
     </ul>
-
 </div>
-
-
 <div class="panel panel-default">
     <div class="panel-heading"><b> {{ _('Modify personal information') }} </b></div>
     <div class="panel-body">
-
         <form class="form-horizontal" action="/user/changeinfo" method="post" id="form_changeinfo">
-
             <div class="form-group">
                 <label class="col-sm-2 control-label" for="rawpass">{{ _('Password') }}</label>
 
@@ -31,7 +18,6 @@
                            placeholder="Please input a password"/>
                 </div>
             </div>
-
             <div class="form-group">
                 <label class="col-sm-2 control-label" for="user_email">{{ _('Email') }}</label>
 
@@ -40,8 +26,6 @@
                            placeholder="Please enter a new email address."/>
                 </div>
             </div>
-
-
             <div class="form-group">
                 <label class="col-sm-2 control-label"></label>
 
@@ -51,14 +35,7 @@
                 </div>
             </div>
         </form>
-
-
     </div>
-
-
 </div>
-
-
-
 {% end %}
 

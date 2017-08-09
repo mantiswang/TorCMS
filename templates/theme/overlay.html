@@ -5,9 +5,7 @@
 {% end %}
 {% end %}
 {% block zhuti %}
-
 <div class="panel panel-black">
-
     <div class="panel-heading">
         <H1>在线叠加地图</H1>
 
@@ -15,23 +13,22 @@
             <div class="row">
                 <div class="col-md-10">
                     {% for x in app_arr %}
-                    <a class="btn btn-info btn-xs" href="/map/{{ x.uid }}"><span class="badge">{{x.uid}}</span>{{x.title[:12] }}</a>
+                    <a class="btn btn-info btn-xs" href="/map/{{ x.uid }}"><span class="badge">{{x.uid}}</span>
+                        {{ x.title[:12] }}
+                    </a>
                     {% end %}
                 </div>
                 <div class="col-md-2" style="text-align: right;">
                     <a class="btn btn-info btn-xs" href="/map/overlay/{{ app_str }}?fullscreen=1" target="_blank">
                         <span class="glyphicon glyphicon-fullscreen"></span> 全屏</a>
-
                 </div>
             </div>
         </div>
     </div>
-
     <div class="panel-body">
         {% block content %}
         {% end %}
     </div>
-
     <div class="panel-footer">
         <div class="row">
             <div class="col-md-6">
@@ -39,7 +36,6 @@
                 http://www.maplet.org/map/overlay/{{ app_str }}
             </a>
             </div>
-
             <div class="col-md-6 ">
                 <div class="widget_baidu_share"> {% module baidu_share() %}</div>
             </div>
@@ -47,7 +43,6 @@
     </div>
 </div>
 {% end %}
-
 {% block right %}
 <div class="panel panel-black">
     <div class="panel-heading">
@@ -62,16 +57,13 @@
         {% module app_user_recent(userinfo.user_name, 'm', 6) %}
         {% end %}
     </ul>
-
 </div>
-
 <div class="panel panel-black">
     <div class="panel-heading">
         <h3 class="panel-title">
             使用最多
         </h3>
     </div>
-
     <ul class="list-group">
         {% if userinfo is None %}
         {% module app_most_used('m', 10) %}

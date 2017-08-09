@@ -1,12 +1,7 @@
-
 {% extends "../theme/bage.html" %}
-
-    {% block headinfo %}
- {% module use_f2e('codemirror') %}
-
-
+{% block headinfo %}
+{% module use_f2e('codemirror') %}
 <script type="text/javascript">
-
     jQuery.validator.addMethod("isMobile", function (value, element) {
         var length = value.length;
         var mobile = /^(((13[0-9]{1})|(15[0-9]{1}))+\d{8})$/;
@@ -53,12 +48,8 @@
     }
 
 </script>
-
-
-    {% end %}
-
+{% end %}
 {% block typebody %}
-
 {% end %}
 
 

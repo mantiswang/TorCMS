@@ -1,8 +1,5 @@
 {% extends "./tmplinfo.html" %}
-
 {% block headinfo %}
-
-
 <script type="text/javascript">
     var obj = {};
     function change(span) {
@@ -57,54 +54,34 @@
 
 
 </script>
-
 <script type="text/javascript">
     $(function () {
         select();
     });
 </script>
-
-
 {% end %}
-
 {% block typebody %}
-
-
 <div class="row">
-
-
     <div class="col-sm-8">
-
         <ol class="breadcrumb">
             <li>Current location：<a href="/">Info</a></li>
             <li><a href="/list/{{pcatinfo.uid}}">{{pcatinfo.name}}</a></li>
             {% if catinfo %}
             <li><a href="/list/{{catinfo.uid}}">{{catinfo.name}}</a></li>
             {% end %}
-
             {% if userinfo and( userinfo.role[2] >= '2') %}
             <li><a href="/publish/{{ widget_info['parentid'] }}" class="btn btn-primary btn-sm">Published
                 {{ widget_info['catname'] }} Data</a></li>
             {% end %}
-
-
         </ol>
-
-
         <ul class="list-group">
             {% block infolist %}
-
             {% end %}
-
-
         </ul>
-
         <div class="clear"></div>
         <div class="iga_pagination">
-
             <span id="resultFenye"></span>
         </div>
-
         <div class="clear"></div>
         <div class="row">
             <div class="col-sm-12">
@@ -114,27 +91,24 @@
         <br>
     </div>
     <div class="col-sm-4">
-
         <div class="panel panel-primary">
             <div class="panel-heading">
-
-               Filter
+                Filter
             </div>
-
             <ul class="list-group">
                 {% block infoselect %} {% end %}
             </ul>
         </div>
-
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <span class="title colorme">{% for taginfo in cat_enum %}
+                <span class="title colorme">
+                    {% for taginfo in cat_enum %}
                 {% if taginfo.uid.endswith('00') %}
                {{ taginfo.name }}
                 {% end %}
-                {% end %}</span>
+                {% end %}
+                </span>
             </div>
-
             <ul class="list-group">
                 {% for taginfo in cat_enum %}
                 {% if not taginfo.uid.endswith('00') %}
@@ -150,9 +124,7 @@
             <ul class="list-group">
                 {% module post_recent(8) %}
             </ul>
-
         </div>
     </div>
 </div>
-
 {% end %}
