@@ -1,6 +1,4 @@
 {% extends "../theme/bage.html" %}
-
-
 {% block typebody %}
 <div class="mtop">
     <ul class="breadcrumb">
@@ -8,13 +6,9 @@
         <li class="active">Wiki {{ _('List') }}</li>
     </ul>
 </div>
-
-
 <div class="panel panel-primary">
     <div class="panel-heading"><b>Wiki {{ _('List') }} </b></div>
     <div class="panel-body">
-
-
         <ul class="list-group">
             {% for x in view %}
             <li class="list-group-item">
@@ -25,10 +19,6 @@
             </li>
             {% end %}
         </ul>
-
-
     </div>
 </div>
-
-
 {% end %}
