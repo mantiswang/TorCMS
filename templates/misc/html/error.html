@@ -14,12 +14,12 @@
         <h2>{{ _('Detailed information') }}</h2>
         <br>
         {% if kwd is not None %}
-            {% if 'info' in kwd %}
-            <p> {{ kwd['info'] }}</p>
-            {% end %}
-            {% if 'link' in kwd %}
-            <p><a href="{{ kwd['link'] }}" class="btn btn-info btn-xs">Return to the previous step.</a></p>
-            {% end %}
+        {% if 'info' in kwd %}
+        <p> {{ kwd['info'] }}</p>
+        {% end %}
+        {% if 'link' in kwd %}
+        <p><a href="{{ kwd['link'] }}" class="btn btn-info btn-xs">Return to the previous step.</a></p>
+        {% end %}
         {% end %}
     </div>
 </div>

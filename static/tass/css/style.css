@@ -11350,6 +11350,21 @@ body {
   font-weight: bold;
 }
 
+/* line 1360, ../sass/inc/_osgeo.sass */
+.fr {
+  float: right;
+}
+
+/* line 1362, ../sass/inc/_osgeo.sass */
+.padr10 {
+  padding-right: 10px;
+}
+
+/* line 1365, ../sass/inc/_osgeo.sass */
+.tabfix h4 {
+  color: #0492dc;
+}
+
 /* line 4, ../sass/inc/_codeit.sass */
 .codehilite {
   background: #f8f8f8;
