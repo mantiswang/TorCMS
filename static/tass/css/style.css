@@ -11365,6 +11365,11 @@ body {
   color: #0492dc;
 }
 
+/* line 1367, ../sass/inc/_osgeo.sass */
+blockquote {
+  font-size: 14px;
+}
+
 /* line 4, ../sass/inc/_codeit.sass */
 .codehilite {
   background: #f8f8f8;
