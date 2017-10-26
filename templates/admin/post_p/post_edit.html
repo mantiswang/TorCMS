@@ -31,24 +31,24 @@
 </script>
 <div class="main">
     <div class="title" >
-        <span>更新文档{{ dbrec.post_id }}</span>
+        <span>更新文档{{ postinfo.post_id }}</span>
     </div>
 
     <div class="content" id="addinfo">
         <form action="" method="post" class="pure-form pure-form-stacked" id="form_post">
             <fieldset>
-                <input type="hidden" id="uid" name="uid" value="{{ dbrec.post_id }}"/>
+                <input type="hidden" id="uid" name="uid" value="{{ postinfo.post_id }}"/>
 
                 <div class="pure-g">
                     <div class="pure-u-3-5">
                         <div class="pure-control-group">
                             <label for="title">标题</label>
-                            <input type="text" id="title" name="title" value="{{ dbrec.title }}" size=58/>
+                            <input type="text" id="title" name="title" value="{{ postinfo.title }}" size=58/>
                         </div>
 
                         <div class="pure-control-group">
                             <label for="keywords">关键词</label>
-                            <input id="keywords" name="keywords" type="text" value="{{ dbrec.keywords }}">
+                            <input id="keywords" name="keywords" type="text" value="{{ postinfo.keywords }}">
                         </div>
                         <div class="pure-control-group">
                             <label for="tags">标签</label>
@@ -60,8 +60,8 @@
                         <div class="pure-control-group">
                             <label for="src_type">文档类型</label>
                             <select id="src_type" name="src_type">
-                                <option value="0" {% if dbrec.src_type== 0 %} selected {% end %}>MarkDown</option>
-                                <option value="1" {% if dbrec.src_type== 1 %} selected {% end %}>RestructedText</option>
+                                <option value="0" {% if postinfo.src_type== 0 %} selected {% end %}>MarkDown</option>
+                                <option value="1" {% if postinfo.src_type== 1 %} selected {% end %}>RestructedText</option>
                             </select>
                         </div>
 
@@ -69,7 +69,7 @@
 
                         <div class="pure-control-group">
                             <label for="logo">特色图片</label>
-                            <input id="logo" name="logo" type="text" value="{{ dbrec.logo }}"/>
+                            <input id="logo" name="logo" type="text" value="{{ postinfo.logo }}"/>
                         </div>
 
                         <div class="pure-control-group">
@@ -103,7 +103,7 @@
                 <div class="pure-control-group">
                     <label for="cnt_md">内容<br/>(MarkDown语法)</label>
             <textarea rows=26 id="cnt_md" name="cnt_md" cols="100">
-                {% raw unescape(dbrec.cnt_md) %}
+                {% raw unescape(postinfo.cnt_md) %}
             </textarea>
                 </div>
 
@@ -117,7 +117,7 @@
 
                 <div class="pure-control-group">
                     <label></label>
-                    <input onclick="update_info('{{ dbrec.post_id }}')" value="更新数据"
+                    <input onclick="update_info('{{ postinfo.post_id }}')" value="更新数据"
                            class="pure-button pure-button-primary">
                 </div>
             </fieldset>
