@@ -6,21 +6,16 @@
         <div class="col-sm-12">
             <div class="listinfo_title" style="font-weight: bold">
                 <a href="/info/{{ postinfo.uid }}">
-                    {{ postinfo.title }}{% raw widget_info['zhiding'] %}{% raw widget_info['tuiguang'] %}
+                    {{ postinfo.title }}
                 </a>
             </div>
             <div class="listinfo_content" style="width: 99%;overflow: hidden;margin: 5px 15px 20px 5px;">
-                <a href="/info/{{ post_info.uid }}">
+                <a href="/info/{{ postinfo.uid }}">
                     {% module generate_abstract(postinfo.cnt_html)[:120] %}...
                 </a>
             </div>
             <div class="listinfo_extra">
-                {% if 'def_tag_arr' in postinfo.extinfo %}
-                <p>{% for x in postinfo.extinfo['def_tag_arr'] %}
-                    <a href="/info_tag/{{ x }}" class="btn btn-primary btn-xs">{{ x }}</a>
-                    {% end %}
-                </p>
-                {% end %}
+               {% module post_labels(postinfo = postinfo) %}
             </div>
         </div>
     </div>
